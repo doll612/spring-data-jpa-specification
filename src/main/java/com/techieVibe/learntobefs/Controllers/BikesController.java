@@ -53,7 +53,6 @@ public class BikesController {
 		SearchSpecification<Bike> bikeSpec = new SearchSpecification();
 		bikeSpec.add(new SearchCriteria("name", "Priyanka Singh", SearchOperator.EQUAL));
 		bikeSpec.add(new SearchCriteria("purchasePrice", 2100.00, SearchOperator.EQUAL));
-		//
 		String[] properties = {"name"};
 		
 		Page<Bike> msTitleRatingList = bikeRepository.findAll(bikeSpec, PageRequest.of(0, 10, Sort.by(Direction.DESC, properties)));
