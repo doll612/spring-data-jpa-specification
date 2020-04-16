@@ -74,10 +74,6 @@ public class SearchSpecification<T> implements Specification<T> {
 			}
 		}
 
-		predicates.forEach(i -> {
-			System.out.println("predicates data >> : " + i.toString());
-		});
-		// needs Object[] as param, so converted list to array
 		return builder.and(predicates.toArray(new Predicate[0]));
 	}
 
